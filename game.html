@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:900" rel="stylesheet">
+  <title>User Inyerface - A worst-practice UI experiment</title>
+  <meta name="description" content="User Inyerface - A worst-practice UI experiment">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.htm">
+  <link rel="icon" type="image/png" href="favicon.htm">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div v-cloak id="app">
+    <ui-game inline-template>
+      <div class="game view">
+        <ui-cookies @hide="hideCookies" v-if="cookiesIsActive"></ui-cookies>
+        <div class="view__content">
+          <div class="view__row">
+            <ui-logo></ui-logo>
+          </div>
+          <div class="view__row">
+            <ui-timer center></ui-timer>
+          </div>
+          <div class="view__row">
+            <ui-pagination :active-index="activePageIndex" :pages="pages" center v-if="!gameFinished"></ui-pagination>
+          </div>
+          <div class="view__row">
+            <ui-login-form-with-password-check v-if="currentPageIndex===0" :page="1" :num-pages="maxPages" @complete="onCompleteStep" @cancel="toggleConfirmModal" @open-terms-and-conditions="showTermsAndConditions(true)"></ui-login-form-with-password-check>
+            <ui-avatar-and-interests-page v-if="currentPageIndex===1" :page="2" :num-pages="maxPages" @complete="onCompleteStep" @cancel="onCancelStep"></ui-avatar-and-interests-page>
+            <ui-personal-details v-if="currentPageIndex===2" :page="3" :num-pages="maxPages" @complete="onCompleteStep" @cancel="toggleConfirmModal" @validation-error="onPersonalDetailsError"></ui-personal-details>
+            <ui-captcha-page v-if="currentPageIndex===3" :page="4" :num-pages="maxPages" @complete="onCompleteStep"></ui-captcha-page>
+            <ui-end-screen v-if="gameFinished"></ui-end-screen>
+          </div>
+        </div>
+        <ui-modal @close="toggleConfirmModal" v-if="confirmModalIsActive" :closable="false">
+          <h2 class="title title--center">Are you sure you want to cancel?</h2>
+          <div class="align align--center align--gutter-sm">
+            <div class="align__cell">
+              <a class="button button--solid button--red" href="index.html">Yes</a>
+            </div>
+            <div class="align__cell">
+              <ui-button @click="toggleConfirmModal" color="green">Cancel</ui-button>
+            </div>
+          </div>
+        </ui-modal>
+        <ui-modal v-if="termsAndConditionsVisible" :closable="false">
+          <ui-terms-and-conditions @accept="showTermsAndConditions(false)"></ui-terms-and-conditions>
+        </ui-modal <!-- Personal details errors modal -->
+        <ui-modal class="personal-details-errors-modal" v-if="personalDetailsPageHasErrors" :closable="false">
+          <h2 class="title title--center">Please fill in all fields correctly:</h2>
+          <div class="personal-details-errors-modal__list-container">
+            <ul>
+              <li v-for="error in personalDetailsPageErrors">{{error}}</li>
+            </ul>
+          </div>
+          <div class="align align--center align--gutter-sm">
+            <div class="align__cell">
+              <ui-button @click="onClosePersonalDetailsErrors" color="green">OK</ui-button>
+            </div>
+          </div>
+        </ui-modal>
+        <ui-timer-modal @close="toggleTimerModal" v-if="timerModalIsActive"></ui-timer-modal>
+        <ui-help-form v-if="!gameFinished"></ui-help-form>
+      </div>
+    </ui-game>
+    <a class="bagaar-link" href="https://www.bagaar.be" target="_blank">
+  <img alt="bagaar.be" title="https://www.bagaar.be" class="bagaar-link__image" src="images/bagaar-logo.svg">
+</a>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
