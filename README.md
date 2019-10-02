@@ -4,7 +4,7 @@
 ### A small challenge to create a copy of https://userinyerface.com/ that is actually correct.
 
 ## What's your task?
-===
+
 1. Go through [the original website here](https://userinyerface.com/).
 2. Go through the corrected version (in-progress).
 3. Fork this repository.
