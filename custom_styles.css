@@ -2,7 +2,8 @@
     cursor: pointer
 }
 .cookies{
-    padding: 0px !important;
+    width: 100%;
     position: absolute;
-    width: 100%
+    padding: 0px !important;
+
 }
