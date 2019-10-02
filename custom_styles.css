@@ -1,3 +1,8 @@
 #startLink{
     cursor: pointer
 }
+.cookies{
+    padding: 0px !important;
+    position: absolute;
+    width: 100%
+}
