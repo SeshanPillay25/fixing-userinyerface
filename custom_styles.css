@@ -1,3 +1,12 @@
+.view__row p {
+  text-transform: lowercase;
+}
+.view__row u {
+  text-decoration: none;
+}
+.start__highlight {
+  color: black;
+}
 .start__button{
     cursor: pointer
 }
