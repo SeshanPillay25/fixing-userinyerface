@@ -722,7 +722,7 @@ exports.default = _vue2.default.extend({
 });
 
 },{"./template.html":21,"vue/dist/vue.min.js":92}],21:[function(require,module,exports){
-module.exports = "<div class=cookies><div class=\"align align--fluid\"><div class=align__cell><p class=cookies__message>This site uses cookies, is that a problem for you?</p></div><div class=align__cell><div class=\"align align--gutter-md u-right\"><div class=align__cell><ui-button @click=hide color=transparent>Not really, no</ui-button></div><div class=align__cell><ui-button class=cookies__button color=white>Yes</ui-button></div></div></div></div></div>";
+module.exports = "<div class=cookies><div class=\"align align--fluid\"><div class=align__cell> <p class=cookies__message>Our site uses cookies to offer you better browsing experience</p></div><div class=align__cell> <div class=\"align align--gutter-md u-right\"><div class=align__cell><ui-button @click=hide style=\"cursor:pointer;\">No cookies!</ui-button></div><div class=align__cell><ui-button @click=hide class=cookies__button>I love cookies!</ui-button></div></div></div></div></div>";
 
 },{}],22:[function(require,module,exports){
 'use strict';
