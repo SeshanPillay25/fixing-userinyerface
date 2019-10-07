@@ -2638,26 +2638,16 @@ body {
     background-color: #29c566;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .4);
     border: 0;
-    color: #fff;
+    color: #0c58da;
     cursor: pointer;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 400;
     outline: 0;
     padding: 0
 }
 
 html:not(.touchevents) .start__button:not([disabled]):not(.is-disabled):hover {
     transform: scale(1.1)
-}
-
-.start__link {
-    color: inherit;
-    cursor: text;
-    text-decoration: none
-}
-
-.start__highlight {
-    color: rgba(255, 255, 255, .4)
 }
 
 .storybook {
