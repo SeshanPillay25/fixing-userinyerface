@@ -1973,7 +1973,7 @@ exports.default = _vue2.default.extend({
 });
 
 },{"./template.html":46,"vue/dist/vue.min.js":92}],46:[function(require,module,exports){
-module.exports = "<div :class=className><div class=modal__box><div class=modal__content><slot></slot><span v-if=isClosable class=modal__close-copyright><span @click=close>&#169;lose</span> {{year}}</span></div><span @click=toggleFullscreen class=modal__fullscreen></span></div></div>";
+module.exports = "<div :class=className><div class=modal__box><div class=modal__content><slot></slot></div><span v-if=isClosable <span @click=close class=modal__close></span> </span></div></div>";
 
 },{}],47:[function(require,module,exports){
 'use strict';
