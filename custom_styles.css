@@ -1,22 +1,25 @@
-.start__link {
-  cursor: pointer;
-}
-
-.view__row p {
-  text-transform: lowercase;
-}
-.view__row u {
-  text-decoration: none;
-}
 .start__highlight {
   color: black;
 }
 .start__button{
     cursor: pointer
 }
+
 .cookies{
+    margin: 1rem 2rem;
+    background-color: transparent;
     width: 100%;
     position: absolute;
     padding: 0px !important;
+}
 
+.cookies__button{
+    border: white 1px solid;
+}
+
+.cookies__button:hover {
+  color: #0c58da;
+  cursor: pointer;
+  border: transparent;
+  background-color: white;
 }
