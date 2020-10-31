@@ -2990,7 +2990,7 @@ exports.default = _modal2.default.extend({
 });
 
 },{"../modal":47,"./template.html":67}],67:[function(require,module,exports){
-module.exports = "<ui-modal-template><h2 class=\"title title--center\">Hurry up, time is ticking!</h2><ui-timer color=gray center></ui-timer><ui-button v-if=locked @click=unlock color=red center>Unlock</ui-button><ui-button v-else @click=lock color=green center>Lock</ui-button></ui-modal-template>";
+module.exports = "<ui-modal-template><h2 class=\"title title--center\">Hurry up, time is ticking!</h2><ui-timer color=gray center></ui-timer><ui-button v-if=locked @click=unlock color=green center>🔓Unlock</ui-button><ui-button v-else @click=lock color=red center>🔒Lock</ui-button></ui-modal-template>";
 
 },{}],68:[function(require,module,exports){
 'use strict';
