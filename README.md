@@ -3,7 +3,7 @@
 
 ### A small challenge to create a copy of https://userinyerface.com/ that is actually correct.
 
-## What's your task?
+## How to contribute?
 
 1. Go through [the original website here](https://userinyerface.com/).
 2. Go through the corrected version (in-progress).
@@ -14,5 +14,3 @@
 7. Commit your changes.
 8. Submit your pull request to the dev2021 branch.
 9. Have fun!
-
-#### The corrected version will be hosted here [User Interface Corrected Version](https://seshanpillay25.github.io/fixing-userinyerface/)
