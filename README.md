@@ -6,7 +6,7 @@
 ## How to contribute?
 
 1. Go through [the original website here](https://userinyerface.com/).
-2. Go through the corrected version (in-progress).
+2. Go through the latest deployed version https://seshanpillay25.github.io/fixing-userinyerface/
 3. Fork this repository.
 4. Clone it to your local machine.
 5. Start fixing the errors!
